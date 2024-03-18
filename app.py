@@ -7,7 +7,7 @@ from diffusers import StableDiffusionPipeline
 from huggingface_hub import cached_download
 
 # Function to handle authentication errors (optional)
-def download_or_load_model(model_id, auth_token="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"):
+def download_or_load_model(model_id, auth_token=".........."):
     try:
         # Try BFloat16 if hardware supports it efficiently (adjust based on your system)
         return StableDiffusionPipeline.from_pretrained(model_id, revision="fp16", torch_dtype=torch.bfloat16, use_auth_token=auth_token)
